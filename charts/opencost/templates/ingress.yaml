@@ -24,8 +24,7 @@ spec:
   {{- end }}
   rules:
     {{- range .Values.opencost.ui.ingress.hosts }}
-    - host: {{ . | quote }}
-      http:
+    - http:
         paths:
           {{- range .paths }}
           - path: {{ . }}
